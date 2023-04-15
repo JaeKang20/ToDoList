@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p data-ke-size="size16">안녕하세요! <b>todolist</b>를 만들어보세요!</p>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">먼저 로그인해주시고 당신의 todolist를 만드세요!</p>
+
+<span th:if="${userId==null}">
+		<a href="https://kauth.kakao.com/oauth/authorize?client_id=5559c68695b9d154a339d12cac73e20a&redirect_uri=http://localhost:8080/todolist&response_type=code">
+			<img src = "img/kakao_login_medium_narrow.png">
+		</a>
+	</span>
+	<span th:if="${userId!=null}">
+		<form name="logout" action="http://localhost:8080/logout">
+			<input type="submit" value="로그아웃">
+		</form>
+	</span>
+
+<div id="__endic_crx__">
+<div class="css-diqpy0">&nbsp;</div>
+</div>
+</body>
+</html>
