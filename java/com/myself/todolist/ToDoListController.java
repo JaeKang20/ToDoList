@@ -39,8 +39,7 @@ public class ToDoListController {
         List<ToDoListEntity> todos = pagedResult.getContent();
         return ResponseEntity.ok(todos);
 }
-        //http://localhost:8080/todolist?pageNo=1&pageSize=5
-    
+            
 
  // 특정 To Do List 조회
     @GetMapping("/{id}")
